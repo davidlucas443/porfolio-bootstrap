@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <style>
+      body {
+        scroll-behavior: smooth;
+        font-family: "Poppins", sans-serif;
+      }
+
+      /* Hero Section */
+      header {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 100px 20px;
+      }
+      header img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 4px solid white;
+        object-fit: cover;
+        margin-bottom: 20px;
+      }
+
+      /* Sessões */
+      section {
+        padding: 80px 0;
+      }
+
+      /* Projetos */
+      .card {
+        border: none;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Contato */
+      .social-links a {
+        color: #0d6efd;
+        font-size: 24px;
+        margin: 0 10px;
+        transition: color 0.3s ease;
+      }
+      .social-links a:hover {
+        color: #6610f2;
+      }
+      footer a {
+        text-decoration: none; /* remove o sublinhado */
+      }
+      footer i:hover {
+        color: #06b6d4; /* azul claro */
+        transition: 0.3s;
+      }
+      .title-projetos {
+        margin-bottom: 75px;
+      }
+      .card-body-cadastro {
+        margin-top: 38px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <title>Bootstrap</title>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-dark">
+      <nav class="navbar bg-body-dark">
+        <div class="container">
+          <a class="navbar-brand" href="/src/pages/index.html">
+            <img
+              src="/src/assets/icons/logo-ds.png"
+              alt="Bootstrap"
+              width="48"
+              height="48"
+            />
+          </a>
+        </div>
+      </nav>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/src/pages/index.html">Home</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="/src/pages/index.html"
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sobre">Sobre</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#projetos">Projetos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contatos">Contato</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <header id="sobre">
+      <div class="container">
+        <img src="/src/assets/images/foto_linkdln.png" alt="Foto de Perfil" />
+        <h1 class="fw-bold">David Sousa</h1>
+        <p class="lead">Desenvolvedor Beck-End | Front-End</p>
+        <p>
+          Sou o David Sousa, tenho 16 anos. Atualmente estou cursando
+          Desenvolvimento de Sistemas no Senai Suiço Brasileiro, dentro do curso
+          estou não só aprendendo, como pondo em prática meus conhecimentos em
+          API-REST com java, HTML e CSS, SQL e muitos mais.
+        </p>
+      </div>
+    </header>
+    <section id="projetos" class="bg-light py-5">
+      <div class="container text-center">
+        <h2 class="title-projetos">Projetos</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card shadow-sm">
+              <img
+                src="/src/assets/images/ajude-aqui.png"
+                class="card-img-top"
+                alt="Projeto 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Ajude Aqui</h5>
+                <p class="card-text">
+                  Uma plataforma que conecta prestadores de serviços a pessoas
+                  que precisam de ajuda em diversas áreas.
+                </p>
+                <a href="" class="btn btn-dark">Ver Projeto</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card shadow-sm">
+              <img
+                src="/src/assets/images/tela-cadastro.png"
+                class="card-img-top"
+                alt="Projeto 1"
+              />
+              <div class="card-body-cadastro">
+                <h5 class="card-title">Tela Cadastro</h5>
+                <p class="card-text">
+                  Minha primeira tela feita inteiramente com HTML e CSS, uma
+                  área de cadastro bem simples.
+                </p>
+                <a href="" class="btn btn-dark">Ver Projeto</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-dark text-white text-center py-4">
+      <p class="mb-2">© 2025 David Sousa</p>
+      <div id="contatos">
+        <a
+          href="https://github.com/davidlucas443"
+          target="_blank"
+          class="text-white mx-3 fs-4"
+        >
+          <i class="bi bi-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/david-sousa-406808349/"
+          target="_blank"
+          class="text-white mx-3 fs-4"
+        >
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="mailto:davidga19391@gmail.com" class="text-white mx-3 fs-4">
+          <i class="bi bi-envelope"></i>
+        </a>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
